@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>등록상품사진 - 바이크원</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .gallery-item {
+            background: white;
+            border: 1px solid var(--border-color);
+            border-radius: 5px;
+            overflow: hidden;
+            transition: transform 0.3s;
+            cursor: pointer;
+        }
+        .gallery-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        .gallery-item img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+        .gallery-info {
+            padding: 15px;
+        }
+        .gallery-info h3 {
+            font-size: 1.1rem;
+            color: var(--primary-black);
+            margin-bottom: 5px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .gallery-info p {
+            font-size: 0.9rem;
+            color: var(--text-gray);
+        }
+        .pagination {
+            display: flex;
+            justify-content: center;
+            margin-top: 40px;
+            gap: 10px;
+        }
+        .pagination a {
+            display: inline-block;
+            width: 35px; height: 35px;
+            line-height: 35px;
+            text-align: center;
+            border: 1px solid var(--border-color);
+            border-radius: 3px;
+            color: var(--primary-black);
+            background: white;
+        }
+        .pagination a.active {
+            background-color: var(--primary-orange);
+            color: white;
+            border-color: var(--primary-orange);
+        }
+        .pagination a:hover:not(.active) {
+            background-color: #eee;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <nav class="navbar">
+        <div class="logo"><a href="index.html">바이크<span>운송</span></a></div>
+        <div class="nav-links">
+            <a href="quote.html">견적문의</a>
+            <a href="faq.html">질문과 답변</a>
+            <a href="gallery.html" style="color: var(--primary-orange);">등록상품사진</a>
+            <a href="review.html">후기게시판</a>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <div class="page-container">
+        <div class="page-header">
+            <h1>등록상품사진</h1>
+            <p>실제 탁송 중인 차량의 안전한 모습을 확인하세요.</p>
+        </div>
+
+        <!-- Content -->
+        <div class="content-area">
+            <div class="board-controls" style="margin-bottom: 20px;">
+                <a href="#" class="btn-primary">사진 등록하기</a>
+            </div>
+            
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1558981403-c5f9899a28bc?q=80&w=800&auto=format&fit=crop" alt="할리데이비슨 안전 탁송">
+                    <div class="gallery-info">
+                        <h3>할리데이비슨 포티에잇 안전 탁송</h3>
+                        <p>서울 ➔ 부산 | 특수 결박 장비 사용</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1568772585407-9361f9bf3c87?q=80&w=800&auto=format&fit=crop" alt="레플리카 장거리 운송">
+                    <div class="gallery-info">
+                        <h3>BMW S1000RR 레플리카 장거리 운송</h3>
+                        <p>인천 ➔ 대구 | 스크래치 방지 랩핑 적용</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1502680390469-be75c86b636f?q=80&w=800&auto=format&fit=crop" alt="스쿠터 대량 탁송">
+                    <div class="gallery-info">
+                        <h3>혼다 PCX 등 스쿠터 대량 탁송</h3>
+                        <p>경기 ➔ 대전 | 윙바디 차량 2열 적재</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1614006126620-8334415ff61f?q=80&w=800&auto=format&fit=crop" alt="클래식 바이크 탁송">
+                    <div class="gallery-info">
+                        <h3>트라이엄프 본네빌 클래식 바이크 탁송</h3>
+                        <p>제주 ➔ 서울 | 프리미엄 1:1 맞춤 탁송</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1449426468159-d96dbf08f19f?q=80&w=800&auto=format&fit=crop" alt="투어링 탁송">
+                    <div class="gallery-info">
+                        <h3>혼다 골드윙 대형 투어링 탁송</h3>
+                        <p>광주 ➔ 강릉 | 대형 리프트 전용 차량 배차</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1520114095438-fb8d9f48f430?q=80&w=800&auto=format&fit=crop" alt="네이키드 바이크 탁송">
+                    <div class="gallery-info">
+                        <h3>야마하 MT-09 안전 탁송</h3>
+                        <p>천안 ➔ 서울 | 당일 긴급 픽업</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pagination -->
+            <div class="pagination">
+                <a href="#">&laquo;</a>
+                <a href="#" class="active">1</a>
+                <a href="#">2</a>
+                <a href="#">3</a>
+                <a href="#">&raquo;</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-grid">
+            <div>
+                <div class="footer-logo">바이크<span>운송</span></div>
+                <p style="color:#aaa; margin-top:20px; line-height: 1.8;">
+                    전국 24시간 오토바이 특수 화물 전문<br>
+                    안전, 신속, 정확을 최우선으로 생각합니다.
+                </p>
+            </div>
+            <div>
+                <h3 style="margin-bottom: 20px; color: white;">고객센터</h3>
+                <p style="font-size: 2rem; font-weight: 700; color: var(--primary-orange); margin-bottom: 10px;">1588-0000</p>
+                <div class="footer-info">
+                    <p>운영시간: 365일 24시간 연중무휴</p>
+                    <p>이메일: info@biketransport.demo</p>
+                </div>
+            </div>
+            <div>
+                <h3 style="margin-bottom: 20px; color: white;">오시는 길</h3>
+                <div class="footer-info">
+                    <p>상호명: 바이크운송 특수물류</p>
+                    <p>사업자등록번호: 123-45-67890</p>
+                    <p>주소: 서울특별시 강남구 화물로 123길</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2026 바이크운송. All Rights Reserved.
+        </div>
+    </footer>
+
+</body>
+</html>

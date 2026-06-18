@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>후기게시판 - 바이크원</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .review-list {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .review-item {
+            background: white;
+            border: 1px solid var(--border-color);
+            padding: 30px;
+            border-radius: 5px;
+        }
+        .review-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+            border-bottom: 1px dashed var(--border-color);
+            padding-bottom: 15px;
+        }
+        .review-title {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--primary-black);
+            margin-bottom: 5px;
+        }
+        .review-meta {
+            color: var(--text-gray);
+            font-size: 0.95rem;
+        }
+        .stars {
+            color: #FFC107;
+            font-size: 1.2rem;
+            letter-spacing: 2px;
+        }
+        .review-body {
+            color: #444;
+            line-height: 1.7;
+        }
+        .pagination {
+            display: flex;
+            justify-content: center;
+            margin-top: 40px;
+            gap: 10px;
+        }
+        .pagination a {
+            display: inline-block;
+            width: 35px; height: 35px;
+            line-height: 35px;
+            text-align: center;
+            border: 1px solid var(--border-color);
+            border-radius: 3px;
+            color: var(--primary-black);
+            background: white;
+        }
+        .pagination a.active {
+            background-color: var(--primary-orange);
+            color: white;
+            border-color: var(--primary-orange);
+        }
+        .pagination a:hover:not(.active) {
+            background-color: #eee;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <nav class="navbar">
+        <div class="logo"><a href="index.html">바이크<span>운송</span></a></div>
+        <div class="nav-links">
+            <a href="quote.html">견적문의</a>
+            <a href="faq.html">질문과 답변</a>
+            <a href="gallery.html">등록상품사진</a>
+            <a href="review.html" style="color: var(--primary-orange);">후기게시판</a>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <div class="page-container">
+        <div class="page-header">
+            <h1>후기게시판</h1>
+            <p>고객님들의 생생한 이용 후기를 확인해 보세요.</p>
+        </div>
+
+        <!-- Content -->
+        <div class="content-area">
+            <div class="board-controls" style="margin-bottom: 20px;">
+                <a href="#" class="btn-primary">후기 작성하기</a>
+            </div>
+
+            <div class="review-list">
+                <!-- Review 1 -->
+                <div class="review-item">
+                    <div class="review-header">
+                        <div>
+                            <div class="review-title">할리데이비슨 안전하게 잘 받았습니다. 감사합니다.</div>
+                            <div class="review-meta">작성자: 최*민 | 작성일: 2026-06-17 | 조회: 45</div>
+                        </div>
+                        <div class="stars">★★★★★</div>
+                    </div>
+                    <div class="review-body">
+                        처음 탁송을 맡겨서 걱정이 많았는데, 상차부터 하차까지 사진으로 다 전송해주셔서 안심이 되었습니다. 기사님도 너무 친절하시고 바이크 결박도 정말 꼼꼼하게 해주시네요. 다음 투어 때도 무조건 여기 이용하겠습니다!
+                    </div>
+                </div>
+
+                <!-- Review 2 -->
+                <div class="review-item">
+                    <div class="review-header">
+                        <div>
+                            <div class="review-title">비 오는 날씨에도 완벽하게 운송해주셨어요!</div>
+                            <div class="review-meta">작성자: 박*현 | 작성일: 2026-06-15 | 조회: 82</div>
+                        </div>
+                        <div class="stars">★★★★★</div>
+                    </div>
+                    <div class="review-body">
+                        하필 탁송 당일에 비가 엄청 쏟아져서 취소해야 하나 고민했는데, 탑차로 깔끔하게 와주셔서 물 한 방울 안 맞고 잘 도착했습니다. 시간 약속도 칼같이 지켜주셔서 너무 만족스럽습니다. 번창하세요!
+                    </div>
+                </div>
+
+                <!-- Review 3 -->
+                <div class="review-item">
+                    <div class="review-header">
+                        <div>
+                            <div class="review-title">비싼 수입 바이크라 조심스러웠는데 완벽합니다.</div>
+                            <div class="review-meta">작성자: 정*훈 | 작성일: 2026-06-12 | 조회: 115</div>
+                        </div>
+                        <div class="stars">★★★★☆</div>
+                    </div>
+                    <div class="review-body">
+                        BMW S1000RR 탁송 맡겼습니다. 카울이나 휠 쪽에 스크래치 날까 봐 엄청 신경 쓰였는데 랩핑 꼼꼼하게 해주시고 리프트 띄울 때도 정말 조심조심 다뤄주시는 모습에 감동받았습니다. 별 하나 뺀 건 기사님이 오시는데 길이 막혀서 10분 정도 늦으셨지만 운송 퀄리티 자체는 100점 만점입니다.
+                    </div>
+                </div>
+                
+                <!-- Review 4 -->
+                <div class="review-item">
+                    <div class="review-header">
+                        <div>
+                            <div class="review-title">스쿠터 여러 대 한 번에 탁송 아주 저렴하게 잘했습니다.</div>
+                            <div class="review-meta">작성자: 강*수 | 작성일: 2026-06-10 | 조회: 90</div>
+                        </div>
+                        <div class="stars">★★★★★</div>
+                    </div>
+                    <div class="review-body">
+                        동호회에서 스쿠터 3대 제주도로 탁송 보낼 일이 있었는데, 대형 윙바디 차량에 한 번에 실어서 보내주셔서 견적도 저렴하게 잘 나왔습니다. 중간중간 위치도 알려주시고 너무 편했어요.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pagination -->
+            <div class="pagination">
+                <a href="#">&laquo;</a>
+                <a href="#" class="active">1</a>
+                <a href="#">2</a>
+                <a href="#">3</a>
+                <a href="#">&raquo;</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-grid">
+            <div>
+                <div class="footer-logo">바이크<span>운송</span></div>
+                <p style="color:#aaa; margin-top:20px; line-height: 1.8;">
+                    전국 24시간 오토바이 특수 화물 전문<br>
+                    안전, 신속, 정확을 최우선으로 생각합니다.
+                </p>
+            </div>
+            <div>
+                <h3 style="margin-bottom: 20px; color: white;">고객센터</h3>
+                <p style="font-size: 2rem; font-weight: 700; color: var(--primary-orange); margin-bottom: 10px;">1588-0000</p>
+                <div class="footer-info">
+                    <p>운영시간: 365일 24시간 연중무휴</p>
+                    <p>이메일: info@biketransport.demo</p>
+                </div>
+            </div>
+            <div>
+                <h3 style="margin-bottom: 20px; color: white;">오시는 길</h3>
+                <div class="footer-info">
+                    <p>상호명: 바이크운송 특수물류</p>
+                    <p>사업자등록번호: 123-45-67890</p>
+                    <p>주소: 서울특별시 강남구 화물로 123길</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2026 바이크운송. All Rights Reserved.
+        </div>
+    </footer>
+
+</body>
+</html>
