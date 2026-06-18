@@ -6,6 +6,7 @@
     <title>바이크원 - 오토바이 운송 전문업체</title>
     <link rel="stylesheet" href="style.css">
     <style>
+        /* Hero Section */
         .hero {
             position: relative;
             background-image: url('file:///C:/Users/qw855/.gemini/antigravity-ide/brain/d20d2bac-07ef-422f-bea6-c8b4a701c289/bike_transport_hero_1781770905101.png');
@@ -61,6 +62,103 @@
             transform: translateY(-3px);
             box-shadow: 0 10px 20px rgba(255,87,34,0.3);
         }
+
+        /* Section Styles for Home */
+        section { padding: 100px 20px; background-color: white; }
+        .section-alt { background-color: #f5f5f5; }
+        .container { max-width: 1200px; margin: 0 auto; }
+        .section-title {
+            font-size: 2.5rem;
+            color: var(--primary-black);
+            font-weight: 900;
+            margin-bottom: 50px;
+            text-align: center;
+            position: relative;
+        }
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 50px; height: 3px;
+            background: var(--primary-orange);
+            margin: 15px auto 0;
+        }
+
+        /* About Us (업체소개) */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+        .about-text h3 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: var(--primary-black);
+        }
+        .about-text p {
+            font-size: 1.1rem;
+            color: var(--text-gray);
+            margin-bottom: 15px;
+            word-break: keep-all;
+            line-height: 1.8;
+        }
+        .about-image {
+            width: 100%;
+            height: 400px;
+            background-image: url('https://images.unsplash.com/photo-1558981403-c5f9899a28bc?q=80&w=800&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        /* Location (오시는길) */
+        .location-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
+        .map-area {
+            width: 100%;
+            height: 400px;
+            background-color: #ddd;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #777;
+            font-size: 1.2rem;
+            border-radius: 10px;
+            box-shadow: inset 0 0 10px rgba(0,0,0,0.1);
+        }
+        .location-info {
+            display: flex;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+        .loc-card {
+            flex: 1;
+            min-width: 300px;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            border: 1px solid var(--border-color);
+        }
+        .loc-card h4 {
+            font-size: 1.3rem;
+            color: var(--primary-orange);
+            margin-bottom: 15px;
+        }
+        .loc-card p {
+            font-size: 1.05rem;
+            margin-bottom: 10px;
+            color: #555;
+        }
+
+        @media (max-width: 768px) {
+            .about-grid { grid-template-columns: 1fr; }
+            .hero h1 { font-size: 3rem; }
+        }
     </style>
 </head>
 <body>
@@ -69,6 +167,7 @@
     <nav class="navbar">
         <div class="logo"><a href="index.html">바이크<span>운송</span></a></div>
         <div class="nav-links">
+            <a href="index.html" style="color: var(--primary-orange);">홈</a>
             <a href="quote.html">견적문의</a>
             <a href="faq.html">질문과 답변</a>
             <a href="gallery.html">등록상품사진</a>
@@ -76,7 +175,7 @@
         </div>
     </nav>
 
-    <!-- Hero -->
+    <!-- Hero Section -->
     <header class="hero">
         <div class="hero-content">
             <h1>전국 어디든 안전하고<br>신속하게 모십니다</h1>
@@ -84,6 +183,49 @@
             <a href="quote.html" class="btn-orange">빠른 견적 알아보기</a>
         </div>
     </header>
+
+    <!-- About Us Section (업체소개) -->
+    <section id="about" class="section-alt">
+        <div class="container">
+            <h2 class="section-title">업체소개</h2>
+            <div class="about-grid">
+                <div class="about-text">
+                    <h3>오토바이 특수 운송의 기준,<br>바이크운송입니다.</h3>
+                    <p>저희 바이크운송은 지난 10년간 단 한 건의 사고도 없이 전국 각지로 고객님의 소중한 바이크를 운송해 온 특수 화물 전문 기업입니다.</p>
+                    <p>일반 화물과 달리 이륜차는 무게 중심과 결박 방식이 매우 중요합니다. 당사는 대형 윙바디 및 특수 리프트 탑차를 운용하며 휠 스크래치 방지 장비, 최고급 결박바 등 이륜차 전용 특수 장비만을 고집합니다.</p>
+                    <p>오직 오토바이만을 연구하고 운송해 온 전문가들이 상차부터 하차까지 완벽한 서비스를 제공합니다.</p>
+                </div>
+                <div class="about-image"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location Section (오시는길) -->
+    <section id="location">
+        <div class="container">
+            <h2 class="section-title">오시는 길</h2>
+            <div class="location-grid">
+                <!-- 아임웹 지도 위젯이 들어갈 자리 -->
+                <div class="map-area">
+                    [ 아임웹 지도 위젯 삽입 영역 (카카오맵 / 네이버지도) ]
+                </div>
+                <div class="location-info">
+                    <div class="loc-card">
+                        <h4>찾아오시는 길</h4>
+                        <p><strong>본사 주소:</strong> 서울특별시 강남구 화물로 123길, 바이크타워 1층</p>
+                        <p><strong>전화번호:</strong> 1588-0000</p>
+                        <p><strong>주차 안내:</strong> 매장 앞 대형 화물차 전용 주차장 무료 이용 가능</p>
+                    </div>
+                    <div class="loc-card">
+                        <h4>운영 및 상담 시간</h4>
+                        <p><strong>운송 접수:</strong> 365일 24시간 연중무휴</p>
+                        <p><strong>고객 센터:</strong> 평일 09:00 ~ 18:00 (주말 및 공휴일 휴무)</p>
+                        <p><strong>야간/긴급:</strong> 야간 긴급 탁송 시 당직 기사 항시 대기 (1588-0000 내선 1번)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- Footer -->
     <footer class="footer">
